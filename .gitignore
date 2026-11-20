@@ -1,0 +1,48 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.routing.example
+
+# Dependencies and generated build files
+node_modules/
+frontend/dist/
+backend/coverage/
+coverage/
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+ai-service/venv/
+
+# Local datasets, experiment outputs, caches and logs
+ai-service/datasets/
+ai-service/runs/
+runs/
+*.cache
+*.log
+*.err
+
+# Model checkpoints: keep only the active five-class and supported legacy models
+*.pt
+!ai-service/models/sentinel_yolo11_5class.pt
+!ai-service/models/sentinel_yolo11.pt
+
+# Requested academic deliverables are maintained separately from the code repo
+research-paper/
+presentation/
+Sentinel_AI_Project_Report.docx
+docs/PROJECT_REPORT.md
+docs/EVALUATION.md
+~$*.docx
+*.pdf
+*.ppt
+*.pptx
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
